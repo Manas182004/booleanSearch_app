@@ -1,0 +1,37 @@
+#Manual Testing with Postman or cURL
+#You can use tools like Postman or cURL to test the booleanSearch endpoint.
+
+#Request:
+#Method: POST
+#URL: http://127.0.0.1:8000/booleanSearch/booleanSearch/
+#Headers:
+#Content-Type: application/json
+#Body:
+
+{
+    "query": "Django AND Python"
+}
+
+#Expected Response:
+#If there are matching candidates:
+
+{
+    "results": [
+        "Experienced Django and Python developer",
+        "Python backend engineer with Django expertise"
+    ]
+}
+
+#If no candidates match:
+
+{
+    "results": []
+}
+
+#If the query is missing or invalid:
+
+{
+    "error": "Query cannot be empty."
+}
+
+
